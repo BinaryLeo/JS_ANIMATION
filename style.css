@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  z-index: -1;
+}
+
+nav {
+  font-family: "Gluten", cursive;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  min-height: 10vh;
+  color: white;
+  align-items: center;
+}
+
+#logo {
+  grid-column: 2/3;
+  font-size: 2rem;
+}
+#logo img {
+  vertical-align: left;
+}
+.hamburger {
+  justify-self: end;
+}
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  height: 60%;
+  width: 100%;
+  position: relative;
+
+  box-shadow: 12px 12px 2px 1px rgba(27, 27, 27, 0.2);
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero::after {
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+}
+.headline {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  font-family: "Gluten", cursive;
+  font-size: 4rem;
+  color: white;
+  transform: translate(-20%, -70%);
+  z-index: 3;
+}
+@media (min-width: 30em) and (max-width: 64em) {
+  #logo img {
+    visibility: hidden;
+  }
+  #logo {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  .headline {
+    font-size: 3rem;
+    left: 25%;
+  }
+}
